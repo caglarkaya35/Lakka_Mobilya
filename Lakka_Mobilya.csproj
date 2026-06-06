@@ -7,6 +7,14 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Content Remove="vercel.json" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="vercel.json" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="MudBlazor" Version="9.5.0" />
     <PackageReference Include="supabase-csharp" Version="0.16.2" />
   </ItemGroup>
