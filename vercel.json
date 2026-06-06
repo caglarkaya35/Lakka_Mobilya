@@ -1,6 +1,5 @@
-﻿namespace Lakka_Mobilya
-{
-    public class Class
-    {
-    }
+﻿{
+    "version": 2,
+    "cleanUrls": true,
+    "framework": "blazor"
 }
