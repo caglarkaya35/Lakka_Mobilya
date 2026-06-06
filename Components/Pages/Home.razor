@@ -1,0 +1,97 @@
+﻿@page "/"
+
+<!-- OKA Yazı Tipini Tarayıcıya Tanıtan Güvenli HTML Linki -->
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+
+<!-- 1. BÖLÜM: OKA Tipi Büyük Karşılama Alanı (Hero Banner) -->
+<div class="oka-hero mb-12" style="position: relative; height: 60vh; background-color: #F9F6F0; display: flex; align-items: center; justify-content: center; overflow: hidden;">
+    <div class="text-center pa-6" style="z-index: 2; max-width: 700px;">
+        <MudText Typo="Typo.h5" Style="font-family: 'Playfair Display', serif; font-style: italic; letter-spacing: 2px; color: #767676;" Class="mb-2">
+            Atölyeden Yaşam Alanınıza
+        </MudText>
+        <MudText Typo="Typo.h2" Style="font-family: 'Playfair Display', serif; font-weight: 500; color: #111111; line-height: 1.2;" Class="mb-6">
+            Zamana Meydan Okuyan<br />El İşçiliği Mobilyalar
+        </MudText>
+        <MudButton Variant="Variant.Filled" Style="background-color: #111111; color: #FFFFFF; font-family: 'Playfair Display', serif; border-radius: 0px; padding: 12px 35px; font-size: 1rem; text-transform: uppercase;">
+            Koleksiyonu Keşfet
+        </MudButton>
+    </div>
+    <!-- Arka plan estetik geçişi -->
+    <div style="position: absolute; width: 100%; height: 100%; background: radial-gradient(circle, rgba(255,255,255,0.2) 0%, rgba(240,235,225,0.4) 100%); top:0; left:0;"></div>
+</div>
+
+<!-- 2. BÖLÜM: Başlık -->
+<div class="text-center mb-8">
+    <MudText Typo="Typo.h4" Style="font-family: 'Playfair Display', serif; font-weight: 500; letter-spacing: 1px; color: #111111;">
+        Kategorilere Göre Alışveriş Yapın
+    </MudText>
+</div>
+
+<!-- 3. BÖLÜM: OKA Tarzı 3'lü Ürün Kategorileri -->
+<MudGrid Spacing="4" Class="mb-12">
+    <!-- Kategori 1: Oturma Odası -->
+    <MudItem xs="12" md="4">
+        <div class="oka-card">
+            <div class="oka-image-wrapper">
+                <div class="oka-dummy-img" style="background-color: #EAE5DC;"></div>
+            </div>
+            <div class="text-center pt-4">
+                <MudText Typo="Typo.h6" Style="font-family: 'Playfair Display', serif; font-weight: 600; color: #111111;">Oturma Odası</MudText>
+                <MudText Typo="Typo.body2" Style="font-family: 'Playfair Display', serif; font-style: italic; color: #767676;">Konsollar, Kitaplıklar & Sehpalar</MudText>
+            </div>
+        </div>
+    </MudItem>
+
+    <!-- Kategori 2: Yemek Odası -->
+    <MudItem xs="12" md="4">
+        <div class="oka-card">
+            <div class="oka-image-wrapper">
+                <div class="oka-dummy-img" style="background-color: #E2DDD3;"></div>
+            </div>
+            <div class="text-center pt-4">
+                <MudText Typo="Typo.h6" Style="font-family: 'Playfair Display', serif; font-weight: 600; color: #111111;">Yemek Odası</MudText>
+                <MudText Typo="Typo.body2" Style="font-family: 'Playfair Display', serif; font-style: italic; color: #767676;">Masif Masalar, Vitrinler & Sandalyeler</MudText>
+            </div>
+        </div>
+    </MudItem>
+
+    <!-- Kategori 3: Yatak Odası -->
+    <MudItem xs="12" md="4">
+        <div class="oka-card">
+            <div class="oka-image-wrapper">
+                <div class="oka-dummy-img" style="background-color: #EFEBE4;"></div>
+            </div>
+            <div class="text-center pt-4">
+                <MudText Typo="Typo.h6" Style="font-family: 'Playfair Display', serif; font-weight: 600; color: #111111;">Yatak Odası</MudText>
+                <MudText Typo="Typo.body2" Style="font-family: 'Playfair Display', serif; font-style: italic; color: #767676;">Özel Gardıroplar, Karyolalar & Komodinler</MudText>
+            </div>
+        </div>
+    </MudItem>
+</MudGrid>
+
+<!-- 4. BÖLÜM: CSS TASARIM VE HOVER GEÇİŞLERİ -->
+<style>
+    .oka-card {
+        cursor: pointer;
+        overflow: hidden;
+    }
+
+    .oka-image-wrapper {
+        position: relative;
+        width: 100%;
+        height: 400px;
+        overflow: hidden;
+        border-radius: 0px; /* OKA'nın keskin ve asil hatları */
+    }
+
+    .oka-dummy-img {
+        width: 100%;
+        height: 100%;
+        transition: transform 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+    }
+
+    /* Fare üzerine geldiğinde görselin OKA'daki gibi çok yumuşakça büyüme animasyonu */
+    .oka-card:hover .oka-dummy-img {
+        transform: scale(1.04);
+    }
+</style>

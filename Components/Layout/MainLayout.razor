@@ -1,0 +1,49 @@
+﻿@inherits LayoutComponentBase
+
+<MudThemeProvider Theme="_okaTheme" />
+<MudDialogProvider />
+<MudSnackbarProvider />
+
+<MudLayout>
+    <MudAppBar Elevation="0" Style="background-color: #FFFFFF; border-bottom: 1px solid #EEEEEE; height: 80px;" Fixed="true">
+        <MudText Typo="Typo.h5" Class="ml-4" Style="font-family: 'Playfair Display', serif; font-weight: 600; letter-spacing: 3px; color: #111111;">
+            LAKKA
+        </MudText>
+
+        <MudSpacer />
+
+        <div class="oka-nav-links d-none d-md-flex">
+            <MudButton Variant="Variant.Text" Style="font-family: 'Playfair Display', serif; color: #111111; text-transform: capitalize; font-size: 1rem; margin: 0 10px;">Oturma Odası</MudButton>
+            <MudButton Variant="Variant.Text" Style="font-family: 'Playfair Display', serif; color: #111111; text-transform: capitalize; font-size: 1rem; margin: 0 10px;">Yemek Odası</MudButton>
+            <MudButton Variant="Variant.Text" Style="font-family: 'Playfair Display', serif; color: #111111; text-transform: capitalize; font-size: 1rem; margin: 0 10px;">Yatak Odası</MudButton>
+            <MudButton Variant="Variant.Text" Style="font-family: 'Playfair Display', serif; color: #111111; text-transform: capitalize; font-size: 1rem; margin: 0 10px;">Mutfak & Atölye</MudButton>
+        </div>
+
+        <MudSpacer />
+
+        <MudButton Variant="Variant.Outlined" Style="border-color: #111111; color: #111111; font-family: 'Playfair Display', serif; border-radius: 0px; text-transform: uppercase; font-weight: 600;" Class="mr-4">
+            Teklif İsteyin
+        </MudButton>
+    </MudAppBar>
+
+    <MudMainContent Class="pt-16" Style="background-color: #FFFFFF; min-height: 100vh;">
+        <MudContainer MaxWidth="MaxWidth.ExtraLarge" Class="mt-8 px-8">
+            @Body
+        </MudContainer>
+    </MudMainContent>
+</MudLayout>
+
+@code {
+    private MudTheme _okaTheme = new MudTheme()
+    {
+        PaletteLight = new PaletteLight()
+        {
+            Primary = "#111111",          // Baskın renk siyah/koyu antrasit
+            Secondary = "#767676",        // Yardımcı gri tonları
+            Background = "#FFFFFF",       // Saf Beyaz Arka Plan
+            Surface = "#FFFFFF",
+            AppbarBackground = "#FFFFFF",
+            TextPrimary = "#111111"
+        }
+    };
+}
